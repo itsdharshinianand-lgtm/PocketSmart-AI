@@ -9,3 +9,4 @@ google-genai
 python-multipart
 httpx
 pytest
+jinja2
