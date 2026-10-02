@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+
+{% block title %}
+Dashboard · PocketSmart AI
+{% endblock %}
+
+
+{% block content %}
+
+<div class="hero compact">
+
+    <span class="badge">
+        DASHBOARD
+    </span>
+
+    <h1 id="welcome">
+        Your PocketSmart workspace
+    </h1>
+
+    <p>
+        Choose a planner and keep your
+        recommendation history in one place.
+    </p>
+
+</div>
+
+
+<section class="grid three">
+
+    <article class="card">
+
+        <h2>
+            Home Interior
+        </h2>
+
+        <a
+            class="button"
+            href="/home-planner"
+        >
+            Plan home
+        </a>
+
+    </article>
+
+
+    <article class="card">
+
+        <h2>
+            Party
+        </h2>
+
+        <a
+            class="button"
+            href="/party-planner"
+        >
+            Plan party
+        </a>
+
+    </article>
+
+
+    <article class="card">
+
+        <h2>
+            Jewelry
+        </h2>
+
+        <a
+            class="button"
+            href="/jewelry-planner"
+        >
+            Plan jewelry
+        </a>
+
+    </article>
+
+</section>
+
+{% endblock %}

@@ -1,0 +1,123 @@
+{% extends "base.html" %}
+
+{% block title %}
+Jewelry Planner · PocketSmart AI
+{% endblock %}
+
+
+{% block content %}
+
+<div class="planner-head">
+
+    <span class="badge">
+        MULTIMODAL AI
+    </span>
+
+    <h1>
+        Jewelry Budget Planner
+    </h1>
+
+    <p>
+        Get occasion and style-aware
+        jewelry recommendations.
+        Upload an outfit image optionally.
+    </p>
+
+</div>
+
+
+<form
+    id="planner-form"
+    class="card form-grid"
+    data-endpoint="/generate-jewelry"
+    enctype="multipart/form-data"
+>
+
+    <label>
+
+        Budget (INR)
+
+        <input
+            name="budget"
+            type="number"
+            min="1"
+            step="100"
+            required
+        >
+
+    </label>
+
+
+    <label>
+
+        Occasion
+
+        <input
+            name="occasion"
+            placeholder="Wedding"
+            required
+        >
+
+    </label>
+
+
+    <label>
+
+        Style
+
+        <input
+            name="style"
+            placeholder="Elegant / Minimal / Traditional"
+            required
+        >
+
+    </label>
+
+
+    <label>
+
+        Outfit image
+
+        <input
+            name="outfit_image"
+            type="file"
+            accept="image/jpeg,image/png,image/webp"
+        >
+
+    </label>
+
+
+    <label class="full">
+
+        Notes
+
+        <textarea
+            name="notes"
+            placeholder="Colors, neckline, preferred metal, etc."
+        ></textarea>
+
+    </label>
+
+
+    <button
+        class="button"
+        type="submit"
+    >
+        Generate recommendations
+    </button>
+
+
+    <p
+        id="form-message"
+        class="message"
+    ></p>
+
+</form>
+
+
+<section
+    id="results"
+    class="results"
+></section>
+
+{% endblock %}

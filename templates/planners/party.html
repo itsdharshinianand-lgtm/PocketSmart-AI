@@ -1,0 +1,132 @@
+{% extends "base.html" %}
+
+{% block title %}
+Party Planner · PocketSmart AI
+{% endblock %}
+
+
+{% block content %}
+
+<div class="planner-head">
+
+    <span class="badge">
+        SMART PLANNER
+    </span>
+
+    <h1>
+        Party Budget Planner
+    </h1>
+
+    <p>
+        Plan catering, venue and
+        decoration around your budget.
+    </p>
+
+</div>
+
+
+<form
+    id="planner-form"
+    class="card form-grid"
+    data-endpoint="/generate-party"
+>
+
+    <label>
+
+        Budget (INR)
+
+        <input
+            name="budget"
+            type="number"
+            min="1"
+            step="100"
+            required
+        >
+
+    </label>
+
+
+    <label>
+
+        Guests
+
+        <input
+            name="guests"
+            type="number"
+            min="1"
+            required
+        >
+
+    </label>
+
+
+    <label>
+
+        Event type
+
+        <input
+            name="event_type"
+            placeholder="Birthday"
+            required
+        >
+
+    </label>
+
+
+    <label>
+
+        City
+
+        <input
+            name="city"
+            placeholder="Coimbatore"
+        >
+
+    </label>
+
+
+    <label class="full">
+
+        Venue details
+
+        <input
+            name="venue"
+            placeholder="Home, hall, hotel, outdoor..."
+        >
+
+    </label>
+
+
+    <label class="full">
+
+        Notes
+
+        <textarea
+            name="notes"
+        ></textarea>
+
+    </label>
+
+
+    <button
+        class="button"
+        type="submit"
+    >
+        Generate recommendations
+    </button>
+
+
+    <p
+        id="form-message"
+        class="message"
+    ></p>
+
+</form>
+
+
+<section
+    id="results"
+    class="results"
+></section>
+
+{% endblock %}

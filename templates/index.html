@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+
+{% block title %}
+PocketSmart AI
+{% endblock %}
+
+
+{% block content %}
+
+<section class="hero">
+
+    <span class="badge">
+        GENAI BUDGET ASSISTANT
+    </span>
+
+    <h1>
+        Plan smarter.
+        Spend with confidence.
+    </h1>
+
+    <p>
+        Build budget-aware plans for your
+        home, parties, and jewelry using
+        Gemini-powered recommendations.
+    </p>
+
+    <div class="actions">
+
+        <a
+            class="button"
+            href="/register"
+        >
+            Get started
+        </a>
+
+        <a
+            class="button secondary"
+            href="/login"
+        >
+            Sign in
+        </a>
+
+    </div>
+
+</section>
+
+
+<section class="grid three">
+
+    <article class="card">
+
+        <h2>
+            🏠 Home
+        </h2>
+
+        <p>
+            Allocate a home budget across
+            rooms, furniture, lighting
+            and decor.
+        </p>
+
+        <a href="/home-planner">
+            Open planner →
+        </a>
+
+    </article>
+
+
+    <article class="card">
+
+        <h2>
+            🎉 Party
+        </h2>
+
+        <p>
+            Plan catering, venue and
+            decoration for your guest count.
+        </p>
+
+        <a href="/party-planner">
+            Open planner →
+        </a>
+
+    </article>
+
+
+    <article class="card">
+
+        <h2>
+            💎 Jewelry
+        </h2>
+
+        <p>
+            Match jewelry to an occasion,
+            style and optional outfit image.
+        </p>
+
+        <a href="/jewelry-planner">
+            Open planner →
+        </a>
+
+    </article>
+
+</section>
+
+{% endblock %}

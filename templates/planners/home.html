@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+
+{% block title %}
+Home Planner · PocketSmart AI
+{% endblock %}
+
+
+{% block content %}
+
+<div class="planner-head">
+
+    <span class="badge">
+        SMART PLANNER
+    </span>
+
+    <h1>
+        Home Interior Planner
+    </h1>
+
+    <p>
+        Enter your constraints and
+        PocketSmart AI will create
+        budget-aware recommendations.
+    </p>
+
+</div>
+
+
+<form
+    id="planner-form"
+    class="card form-grid"
+    data-endpoint="/generate-home"
+>
+
+    <label>
+
+        Budget (INR)
+
+        <input
+            name="budget"
+            type="number"
+            min="1"
+            step="100"
+            required
+        >
+
+    </label>
+
+
+    <label>
+
+        Style
+
+        <input
+            name="style"
+            value="modern"
+            required
+        >
+
+    </label>
+
+
+    <label class="full">
+
+        Rooms
+
+        <input
+            name="rooms"
+            placeholder="Living Room, Bedroom, Kitchen"
+            required
+        >
+
+    </label>
+
+
+    <label class="full">
+
+        Notes
+
+        <textarea
+            name="notes"
+            placeholder="Any special requirements?"
+        ></textarea>
+
+    </label>
+
+
+    <button
+        class="button"
+        type="submit"
+    >
+        Generate recommendations
+    </button>
+
+
+    <p
+        id="form-message"
+        class="message"
+    ></p>
+
+</form>
+
+
+<section
+    id="results"
+    class="results"
+></section>
+
+{% endblock %}
